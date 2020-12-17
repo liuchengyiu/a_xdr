@@ -1,0 +1,61 @@
+{
+    "normal_data": [
+        ["tag", "00", "SEQUENCE"],
+        ["data_tag", "double-long-unsigned", "string"],
+        ["data_class_tag", "long-unsigned", "string"],
+        ["data_cache", "visible-string", "string"]
+    ],
+    "rqueset_write_normal_data": [
+        ["tag","100050011", "SEQUENCE"],
+        ["logical_device_no", "unsigned", "string"],
+        ["info_point_no", "long-unsigned", "string"],
+        ["data_set", "SEQUENCE OF", "00", "array", "object", "false", "OPTIONAL"]
+    ],
+    "test": [
+        ["tag","1000", "SEQUENCE"],
+        ["logical_device_no", "unsigned", "string"],
+        ["info_point_no", "long-unsigned", "string"],
+        ["test_obj", "10001", "object"]
+    ],
+    "test_obj": [
+        ["tag","10001", "SEQUENCE"],
+        ["logical_device_no", "unsigned", "string"],
+        ["info_point_no", "long-unsigned", "string"],
+        ["test_obj", "10002", "object"]
+    ],
+    "test_obj2": [
+        ["tag","10002", "SEQUENCE"],
+        ["logical_device_no", "unsigned", "string"],
+        ["info_point_no", "long-unsigned", "string"]
+    ],
+    "test_sequence_of": [
+        ["tag","100000", "SEQUENCE OF", "octet-string(SIZE(4))", "array", "number", "false"]
+    ],
+    "test_choice": [
+        ["tag","10003", "CHOICE"],
+        ["test1", "unsigned", "string"],
+        ["test2", "10002", "object"]
+    ],
+    "register": [
+        ["tag","100010010", "SEQUENCE"],
+        ["process_no", "double-long", "string"],
+        ["part_info", "001", "object"]
+    ],
+    "part_info": [
+        ["tag","001", "SEQUENCE"],
+        ["name", "visible-string", "string"],
+        ["event", "SEQUENCE OF", "double-long-unsigned", "array", "number", "false"],
+        ["version", "double-long-unsigned", "number"],
+        ["date", "002", "object"]
+    ],
+    "date_time_s": [
+        ["tag","002", "SEQUENCE"],
+        ["year", "long-unsigned", "number"],
+        ["month", "unsigned", "number"],
+        ["day", "unsigned", "number"],
+        ["hour", "unsigned", "number"],
+        ["minute", "unsigned", "number"],
+        ["second", "unsigned", "number"]
+    ]
+
+}
